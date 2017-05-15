@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>系統 | 主頁</title>
+    <!--Import Google Icon Font   http://fonts.useso.com/-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/materialize/css/materialize.min.css" media="screen,projection"/>
+    <!--引入网页logo-->
+    <link rel="icon" type="image/x-icon" href="/img/logo/logo.png">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- 黏性頁腳支持 -->
+    <style type="text/css" th:include="layout/indexLayout::footer_css"></style>
+</head>
+<body>
+<header>
+    <!-- 頭部内容放在这里 -->
+</header>
+<main>
+    <div class="container">
+        <!-- 页面内容放在这里 -->
+    </div>
+</main>
+<!-- 通用頁腳  -->
+<footer class="page-footer" th:include="layout/indexLayout::footer_layout"></footer>
+<!-- 框架支持 -->
+<div th:replace="layout/indexLayout::ImportJS"></div>
+</body>
+</html>
