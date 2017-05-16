@@ -13,6 +13,6 @@ $(document).ready(function () {
 function init() {
     //手机菜单折叠初始化
     $(".button-collapse").sideNav();
-
+    $('.modal').modal();
 }
 

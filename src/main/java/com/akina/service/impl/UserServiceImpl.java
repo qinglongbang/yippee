@@ -20,6 +20,16 @@ public class UserServiceImpl implements IUserService {
     private UserMapper userMapper;
 
     @Override
+    public User Login(String mail, String pwd) {
+        return null;
+    }
+
+    @Override
+    public User regUser(User user) {
+        return null;
+    }
+
+    @Override
     public User findById(Integer user_id) {
         return userMapper.selectByPrimaryKey(user_id);
     }
