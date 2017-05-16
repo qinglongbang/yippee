@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.akina.mapper.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.akina.bean.User" >
+    <id column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="user_name" property="userName" jdbcType="VARCHAR" />
+    <result column="user_mail" property="userMail" jdbcType="VARCHAR" />
+    <result column="user_pwd" property="userPwd" jdbcType="VARCHAR" />
+    <result column="user_abstract" property="userAbstract" jdbcType="VARCHAR" />
+    <result column="user_head_path" property="userHeadPath" jdbcType="VARCHAR" />
+    <result column="user_pay_path" property="userPayPath" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    user_id, user_name, user_mail, user_pwd, user_abstract, user_head_path, user_pay_path, 
+    create_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where user_id = #{userId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from user
+    where user_id = #{userId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.akina.bean.User" >
+    insert into user (user_id, user_name, user_mail, 
+      user_pwd, user_abstract, user_head_path, 
+      user_pay_path, create_time)
+    values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userMail,jdbcType=VARCHAR}, 
+      #{userPwd,jdbcType=VARCHAR}, #{userAbstract,jdbcType=VARCHAR}, #{userHeadPath,jdbcType=VARCHAR}, 
+      #{userPayPath,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.akina.bean.User" >
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="userName != null" >
+        user_name,
+      </if>
+      <if test="userMail != null" >
+        user_mail,
+      </if>
+      <if test="userPwd != null" >
+        user_pwd,
+      </if>
+      <if test="userAbstract != null" >
+        user_abstract,
+      </if>
+      <if test="userHeadPath != null" >
+        user_head_path,
+      </if>
+      <if test="userPayPath != null" >
+        user_pay_path,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userName != null" >
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userMail != null" >
+        #{userMail,jdbcType=VARCHAR},
+      </if>
+      <if test="userPwd != null" >
+        #{userPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="userAbstract != null" >
+        #{userAbstract,jdbcType=VARCHAR},
+      </if>
+      <if test="userHeadPath != null" >
+        #{userHeadPath,jdbcType=VARCHAR},
+      </if>
+      <if test="userPayPath != null" >
+        #{userPayPath,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.akina.bean.User" >
+    update user
+    <set >
+      <if test="userName != null" >
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userMail != null" >
+        user_mail = #{userMail,jdbcType=VARCHAR},
+      </if>
+      <if test="userPwd != null" >
+        user_pwd = #{userPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="userAbstract != null" >
+        user_abstract = #{userAbstract,jdbcType=VARCHAR},
+      </if>
+      <if test="userHeadPath != null" >
+        user_head_path = #{userHeadPath,jdbcType=VARCHAR},
+      </if>
+      <if test="userPayPath != null" >
+        user_pay_path = #{userPayPath,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.akina.bean.User" >
+    update user
+    set user_name = #{userName,jdbcType=VARCHAR},
+      user_mail = #{userMail,jdbcType=VARCHAR},
+      user_pwd = #{userPwd,jdbcType=VARCHAR},
+      user_abstract = #{userAbstract,jdbcType=VARCHAR},
+      user_head_path = #{userHeadPath,jdbcType=VARCHAR},
+      user_pay_path = #{userPayPath,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+</mapper>

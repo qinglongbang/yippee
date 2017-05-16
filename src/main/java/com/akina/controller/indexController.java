@@ -1,5 +1,6 @@
 package com.akina.controller;
 
+import com.akina.util.StaticStr;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -12,10 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class indexController {
-
-    private static String SYS_INDEX = "index";
-    private static String WELCOME = "welcome";
-
     /**
      * 跳轉至歡迎頁面
      *
@@ -23,7 +20,7 @@ public class indexController {
      */
     @RequestMapping("/")
     public String welcome() {
-        return WELCOME;
+        return StaticStr.WELCOME;
     }
 
 
@@ -33,9 +30,8 @@ public class indexController {
      * @return
      */
     @RequestMapping("index")
-    public String index(Integer id) {
-        int i = 0 / 0;
-        return SYS_INDEX;
+    public String index() {
+        return StaticStr.SYS_INDEX;
     }
 
 }
