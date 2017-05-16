@@ -7,9 +7,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * Created by Akina on 2017-5-16.
+ * @Creator  Akina
+ * @packge
+ * @Time 2017-5-16 -  14:55
+ * @Describe ：用户控制器
  */
-
 @Controller
 @RequestMapping("user")
 public class UserController {
@@ -23,7 +25,7 @@ public class UserController {
 
     @RequestMapping("index")
     public String user_welcome() {
-        System.out.println(iUserService.findById(1));
+//        System.out.println(iUserService.findById(1));
         //返回页面
         return StaticStr.SYS_INDEX;
     }

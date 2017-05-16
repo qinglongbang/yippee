@@ -2,6 +2,12 @@ package com.akina.bean;
 
 import java.util.Date;
 
+/**
+ * @Creator  Akina
+ * @packge
+ * @Time 2017-5-16 -  14:54
+ * @Describe ： 用户实体
+ */
 public class User {
     private Integer userId;
 

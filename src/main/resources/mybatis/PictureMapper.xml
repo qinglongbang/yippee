@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.akina.mapper.PictureMapper" >
+  <resultMap id="BaseResultMap" type="com.akina.bean.Picture" >
+    <id column="pic_id" property="picId" jdbcType="INTEGER" />
+    <result column="pic_name" property="picName" jdbcType="VARCHAR" />
+    <result column="pic_ispixiv" property="picIspixiv" jdbcType="INTEGER" />
+    <result column="pic_http_path" property="picHttpPath" jdbcType="VARCHAR" />
+    <result column="pic_floor_price" property="picFloorPrice" jdbcType="VARCHAR" />
+    <result column="pic_present_price" property="picPresentPrice" jdbcType="VARCHAR" />
+    <result column="pic_plus_times" property="picPlusTimes" jdbcType="INTEGER" />
+    <result column="pic_ state" property="picState" jdbcType="INTEGER" />
+    <result column="pic _user_id" property="picUserId" jdbcType="INTEGER" />
+    <result column="pic_key" property="picKey" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    pic_id, pic_name, pic_ispixiv, pic_http_path, pic_floor_price, pic_present_price, 
+    pic_plus_times, "pic_ state", "pic _user_id", pic_key, create_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from picture
+    where pic_id = #{picId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from picture
+    where pic_id = #{picId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.akina.bean.Picture" >
+    insert into picture (pic_id, pic_name, pic_ispixiv, 
+      pic_http_path, pic_floor_price, pic_present_price, 
+      pic_plus_times, "pic_ state", "pic _user_id", 
+      pic_key, create_time)
+    values (#{picId,jdbcType=INTEGER}, #{picName,jdbcType=VARCHAR}, #{picIspixiv,jdbcType=INTEGER}, 
+      #{picHttpPath,jdbcType=VARCHAR}, #{picFloorPrice,jdbcType=VARCHAR}, #{picPresentPrice,jdbcType=VARCHAR}, 
+      #{picPlusTimes,jdbcType=INTEGER}, #{picState,jdbcType=INTEGER}, #{picUserId,jdbcType=INTEGER}, 
+      #{picKey,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.akina.bean.Picture" >
+    insert into picture
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="picId != null" >
+        pic_id,
+      </if>
+      <if test="picName != null" >
+        pic_name,
+      </if>
+      <if test="picIspixiv != null" >
+        pic_ispixiv,
+      </if>
+      <if test="picHttpPath != null" >
+        pic_http_path,
+      </if>
+      <if test="picFloorPrice != null" >
+        pic_floor_price,
+      </if>
+      <if test="picPresentPrice != null" >
+        pic_present_price,
+      </if>
+      <if test="picPlusTimes != null" >
+        pic_plus_times,
+      </if>
+      <if test="picState != null" >
+        "pic_ state",
+      </if>
+      <if test="picUserId != null" >
+        "pic _user_id",
+      </if>
+      <if test="picKey != null" >
+        pic_key,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="picId != null" >
+        #{picId,jdbcType=INTEGER},
+      </if>
+      <if test="picName != null" >
+        #{picName,jdbcType=VARCHAR},
+      </if>
+      <if test="picIspixiv != null" >
+        #{picIspixiv,jdbcType=INTEGER},
+      </if>
+      <if test="picHttpPath != null" >
+        #{picHttpPath,jdbcType=VARCHAR},
+      </if>
+      <if test="picFloorPrice != null" >
+        #{picFloorPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="picPresentPrice != null" >
+        #{picPresentPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="picPlusTimes != null" >
+        #{picPlusTimes,jdbcType=INTEGER},
+      </if>
+      <if test="picState != null" >
+        #{picState,jdbcType=INTEGER},
+      </if>
+      <if test="picUserId != null" >
+        #{picUserId,jdbcType=INTEGER},
+      </if>
+      <if test="picKey != null" >
+        #{picKey,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.akina.bean.Picture" >
+    update picture
+    <set >
+      <if test="picName != null" >
+        pic_name = #{picName,jdbcType=VARCHAR},
+      </if>
+      <if test="picIspixiv != null" >
+        pic_ispixiv = #{picIspixiv,jdbcType=INTEGER},
+      </if>
+      <if test="picHttpPath != null" >
+        pic_http_path = #{picHttpPath,jdbcType=VARCHAR},
+      </if>
+      <if test="picFloorPrice != null" >
+        pic_floor_price = #{picFloorPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="picPresentPrice != null" >
+        pic_present_price = #{picPresentPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="picPlusTimes != null" >
+        pic_plus_times = #{picPlusTimes,jdbcType=INTEGER},
+      </if>
+      <if test="picState != null" >
+        "pic_ state" = #{picState,jdbcType=INTEGER},
+      </if>
+      <if test="picUserId != null" >
+        "pic _user_id" = #{picUserId,jdbcType=INTEGER},
+      </if>
+      <if test="picKey != null" >
+        pic_key = #{picKey,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where pic_id = #{picId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.akina.bean.Picture" >
+    update picture
+    set pic_name = #{picName,jdbcType=VARCHAR},
+      pic_ispixiv = #{picIspixiv,jdbcType=INTEGER},
+      pic_http_path = #{picHttpPath,jdbcType=VARCHAR},
+      pic_floor_price = #{picFloorPrice,jdbcType=VARCHAR},
+      pic_present_price = #{picPresentPrice,jdbcType=VARCHAR},
+      pic_plus_times = #{picPlusTimes,jdbcType=INTEGER},
+      "pic_ state" = #{picState,jdbcType=INTEGER},
+      "pic _user_id" = #{picUserId,jdbcType=INTEGER},
+      pic_key = #{picKey,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where pic_id = #{picId,jdbcType=INTEGER}
+  </update>
+</mapper>

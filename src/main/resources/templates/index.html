@@ -15,19 +15,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- 黏性頁腳支持 -->
     <style type="text/css" th:include="layout/indexLayout::footer_css"></style>
+    <style type="text/css">
+        #head_menu {
+            height: 150px;
+        }
+
+        .sys_head {
+            margin-top: 3%;
+        }
+
+        .light-blue.accent-3 {
+
+            background-color: #0e7bef !important;
+        }
+
+        .light-blue.accent-2 {
+            background-color: #0f88eb !important;
+        }
+    </style>
 </head>
 <body>
 <header>
-    <!-- 頭部内容放在这里 -->
+    <div class="navbar-fixed">
+        <!-- 頭部内容放在这里 -->
+        <nav class="#00b0ff light-blue accent-3">
+            <div class="nav-wrapper container">
+                <a href="#" data-activates="mobile-demo" class="button-collapse">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <!--<li><a href="#">登陆</a></li>-->
+                    <!--<li><a href="#">注册</a></li>-->
+                    <!-- 登陆后就只显示用户名 -->
+                    <li>
+                        <a href="#" id="user_name">王小明</a>
+                    </li>
+                </ul>
+                <!-- 手机菜单 -->
+                <ul class="side-nav" id="mobile-demo">
+                    <!-- 手机菜单同上 -->
+                    <li><a href="#">登陆</a></li>
+                    <li><a href="#">注册</a></li>
+
+
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">看图</a></li>
+
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="#40c4ff light-blue accent-2" id="head_menu">
+        <div class="container">
+            <div class="row">
+                <!--<img class="col s1 sys_head" src="/img/logo/logo.png">-->
+                <div class="col s1 sys_head"></div>
+                <div class="col s4 offset-s7 sys_head">
+                    <div class="container">
+                        <div class="row">
+                            <a class="col s6 #ffffff white-text" href="#">首页</a>
+                            <a class="col s6 #ffffff white-text" href="#">看图</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </header>
 <main>
     <div class="container">
         <!-- 页面内容放在这里 -->
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
 </main>
 <!-- 通用頁腳  -->
-<footer class="page-footer" th:include="layout/indexLayout::footer_layout"></footer>
+<footer class="page-footer #00b0ff light-blue accent-3" th:include="layout/indexLayout::footer_layout"></footer>
 <!-- 框架支持 -->
 <div th:replace="layout/indexLayout::ImportJS"></div>
+<script type="text/javascript" src="/js/index.js"></script>
 </body>
 </html>
