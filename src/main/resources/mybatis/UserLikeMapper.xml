@@ -20,13 +20,13 @@
     delete from user_like
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.akina.bean. UserLike" >
+  <insert id="insert" parameterType="com.akina.bean.UserLike" >
     insert into user_like (id, user_id, pic_id, 
       create_time)
     values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{picId,jdbcType=INTEGER}, 
       #{createTime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.akina.bean. UserLike" >
+  <insert id="insertSelective" parameterType="com.akina.bean.UserLike" >
     insert into user_like
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -57,7 +57,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.akina.bean. UserLike" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.akina.bean.UserLike" >
     update user_like
     <set >
       <if test="userId != null" >
@@ -72,7 +72,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.akina.bean. UserLike" >
+  <update id="updateByPrimaryKey" parameterType="com.akina.bean.UserLike" >
     update user_like
     set user_id = #{userId,jdbcType=INTEGER},
       pic_id = #{picId,jdbcType=INTEGER},
