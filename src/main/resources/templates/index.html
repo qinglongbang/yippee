@@ -9,6 +9,7 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="/materialize/css/materialize.min.css" media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--引入网页logo-->
     <link rel="icon" type="image/x-icon" href="/img/logo/logo.png">
     <!--Let browser know website is optimized for mobile-->
@@ -21,7 +22,7 @@
         }
 
         .sys_head {
-            margin-top: 3%;
+            margin-top: 8%;
         }
 
         .light-blue.accent-3 {
@@ -33,42 +34,58 @@
             background-color: #0f88eb !important;
         }
 
+        .modal-overlay {
+            background: #0f88eb;
+        }
 
+        #html_nav {
+            position: fixed;
+            z-index: 999;
+        }
+
+        .pic_name {
+            opacity: 0.2;
+            background-color: #0f88eb;
+        }
+
+        .card .card-content {
+            padding: 5px;
+        }
+
+        .material-icons {
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
 <header>
-    <div class="navbar-fixed">
-        <!-- 頭部内容放在这里 -->
-        <nav class="#00b0ff light-blue accent-3">
-            <div class="nav-wrapper container">
-                <a href="#" data-activates="mobile-demo" class="button-collapse">
-                    <i class="material-icons">menu</i>
-                </a>
-                <ul class="right hide-on-med-and-down">
-                    <!--<li><a href="#">登陆</a></li>-->
-                    <!--<li><a href="#">注册</a></li>-->
-                    <!-- 登陆后就只显示用户名 -->
-                    <li>
-                        <a href="#" id="user_name">王小明</a>
-                    </li>
-                </ul>
-                <!-- 手机菜单 -->
-                <ul class="side-nav" id="mobile-demo">
-                    <!-- 手机菜单同上 -->
-                    <li><a href="#">登陆</a></li>
-                    <li><a href="#">注册</a></li>
+    <!-- 頭部内容放在这里 -->
+    <nav class="#00b0ff light-blue accent-3" id="html_nav">
+        <div class="nav-wrapper container">
+            <a href="#" data-activates="mobile-demo" class="button-collapse">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <!--<li><a href="#">登陆</a></li>-->
+                <!--<li><a href="#">注册</a></li>-->
+                <!-- 登陆后就只显示用户名 -->
+                <li>
+                    <a href="#" id="user_name">王小明</a>
+                </li>
+            </ul>
+            <!-- 手机菜单 -->
+            <ul class="side-nav" id="mobile-demo">
+                <!-- 手机菜单同上 -->
+                <li><a href="#">登陆</a></li>
+                <li><a href="#">注册</a></li>
 
 
-                    <li><a href="#">首页</a></li>
-                    <li><a href="#">看图</a></li>
-
-
-                </ul>
-            </div>
-        </nav>
-    </div>
-    <div class="#40c4ff light-blue accent-2" id="head_menu">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">看图</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="#40c4ff light-blue accent-2" id="head_menu" style="margin-top: 50px">
         <div class="container">
             <div class="row">
                 <!--<img class="col s1 sys_head" src="/img/logo/logo.png">-->
@@ -84,35 +101,116 @@
             </div>
         </div>
     </div>
-
-
 </header>
 <main>
 
+    <br><br><br><br><br>
+
 
     <div class="container">
-        <!-- 页面内容放在这里 -->
-        <!--  loding -->
-        <a class="waves-effect waves-light btn" href="#modal1">模态</a>
 
-        <!-- loding -->
-        <div id="modal1" class="modal  ">
-            <div class="preloader-wrapper big active">
-                <div class="spinner-layer spinner-blue">
-                    <div class="circle-clipper left">
-                        <div class="circle"></div>
+
+        <div class="row">
+            <!-- 卡片结构开始 -->
+            <div class="col s3 ">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img class="materialboxed"
+                             src="http://www.materializecss.cn/images/sample-1.jpg">
                     </div>
-                    <div class="gap-patch">
-                        <div class="circle"></div>
+                    <div class="card-content">
+                        <ul class="collection with-header">
+                            <li class="collection-header">
+                                <h5>
+                                    <span>作品名称</span>
+
+                                    <span
+                                            onclick="alert_str('您已经点过了')"
+                                            class="new badge #ff8a80 red accent-1 hoverable"
+                                            data-badge-caption="人喜欢">
+                                        <i class="material-icons">thumb_up</i>
+                                        12312
+                                    </span>
+                                </h5>
+                            </li>
+                            <li class="collection-item">
+                                <span class="#eeeeee grey-text lighten-3">报价:</span>
+                                <span class=" badge " data-badge-caption="￥">20</span>
+                            </li>
+                            <li class="collection-item">
+                                <span class="#eeeeee grey-text lighten-3">当前价格:</span>
+                                <span class="new badge blue hoverable" data-badge-caption="￥">20</span>
+                            </li>
+                            <li class="collection-item">
+                                <span class="#eeeeee grey-text lighten-3">已提价:</span>
+                                <span class=" badge " data-badge-caption="次">20</span>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="circle-clipper right">
-                        <div class="circle"></div>
+                    <div class="card-action">
+                        <div class="row">
+                                  <img   src="http://www.materializecss.cn/images/yuna.jpg" alt="" class="circle responsive-img col s3"> <!-- notice the "circle" class -->
+                                  <img   src="http://www.materializecss.cn/images/yuna.jpg" alt="" class="circle responsive-img col s3"> <!-- notice the "circle" class -->
+                                  <img   src="http://www.materializecss.cn/images/yuna.jpg" alt="" class="circle responsive-img col s3"> <!-- notice the "circle" class -->
+                                  <img   src="http://www.materializecss.cn/images/yuna.jpg" alt="" class="circle responsive-img col s3"> <!-- notice the "circle" class -->
+                            <div class="col s5" style="margin-top: 10px">
+                                <a class="waves-effect waves-light btn">出价</a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
+            <!-- 卡片结构结束 -->
+
+
+            <!-- 卡片结构开始 -->
+            <div class="col s3 ">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img class="materialboxed"
+                             src="http://i0.hdslb.com/bfs/live/c943def40fb4785351624d18f4b1e6b26dee3354.jpg">
+                    </div>
+                    <div class="card-content">
+                        <ul class="collection with-header">
+                            <li class="collection-header">
+                                <h5>
+                                    <span>作品名称</span>
+
+                                    <span
+                                            onclick="alert_str('您已经点过了')"
+                                            class="new badge blue hoverable"
+                                            data-badge-caption="人喜欢">
+                                        <i class="material-icons">thumb_up</i>
+                                        12312
+                                    </span>
+                                </h5>
+                            </li>
+                            <li class="collection-item">
+                                <span class="#eeeeee grey-text lighten-3">报价:</span>
+                                <span class=" badge " data-badge-caption="￥">20</span>
+                            </li>
+                            <li class="collection-item">
+                                <span class="#eeeeee grey-text lighten-3">当前价格:</span>
+                                <span class="new badge blue hoverable" data-badge-caption="￥">20</span>
+                            </li>
+                            <li class="collection-item">
+                                <span class="#eeeeee grey-text lighten-3">已提价:</span>
+                                <span class=" badge " data-badge-caption="次">20</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">这是一个链接</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 卡片结构结束 -->
+
         </div>
 
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
 </main>
 <!-- 通用頁腳  -->
@@ -120,5 +218,14 @@
 <!-- 框架支持 -->
 <div th:replace="layout/indexLayout::ImportJS"></div>
 <script type="text/javascript" src="/js/index.js"></script>
+
+
+<!-- loding模块 -->
+<div id="loding" class="modal">
+    <div class="progress">
+        <div class="indeterminate"></div>
+    </div>
+</div>
+
 </body>
 </html>
