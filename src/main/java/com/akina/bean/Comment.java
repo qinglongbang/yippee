@@ -48,7 +48,6 @@ public class Comment {
      * This method returns the value of the database column comment.comment_id
      *
      * @return the value of comment.comment_id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public Integer getCommentId() {
@@ -60,7 +59,6 @@ public class Comment {
      * This method sets the value of the database column comment.comment_id
      *
      * @param commentId the value for comment.comment_id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setCommentId(Integer commentId) {
@@ -72,7 +70,6 @@ public class Comment {
      * This method returns the value of the database column comment.user_id
      *
      * @return the value of comment.user_id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public Integer getUserId() {
@@ -84,7 +81,6 @@ public class Comment {
      * This method sets the value of the database column comment.user_id
      *
      * @param userId the value for comment.user_id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setUserId(Integer userId) {
@@ -96,7 +92,6 @@ public class Comment {
      * This method returns the value of the database column comment.pic_id
      *
      * @return the value of comment.pic_id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public Integer getPicId() {
@@ -108,7 +103,6 @@ public class Comment {
      * This method sets the value of the database column comment.pic_id
      *
      * @param picId the value for comment.pic_id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setPicId(Integer picId) {
@@ -120,7 +114,6 @@ public class Comment {
      * This method returns the value of the database column comment.comment_info
      *
      * @return the value of comment.comment_info
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public String getCommentInfo() {
@@ -132,7 +125,6 @@ public class Comment {
      * This method sets the value of the database column comment.comment_info
      *
      * @param commentInfo the value for comment.comment_info
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setCommentInfo(String commentInfo) {
@@ -144,7 +136,6 @@ public class Comment {
      * This method returns the value of the database column comment.create_time
      *
      * @return the value of comment.create_time
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public Date getCreateTime() {
@@ -156,10 +147,32 @@ public class Comment {
      * This method sets the value of the database column comment.create_time
      *
      * @param createTime the value for comment.create_time
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+
+    public Comment(Integer commentId, Integer userId, Integer picId, String commentInfo, Date createTime) {
+        this.commentId = commentId;
+        this.userId = userId;
+        this.picId = picId;
+        this.commentInfo = commentInfo;
+        this.createTime = createTime;
+    }
+
+    public Comment() {
+    }
+
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "commentId=" + commentId +
+                ", userId=" + userId +
+                ", picId=" + picId +
+                ", commentInfo='" + commentInfo + '\'' +
+                ", createTime=" + createTime +
+                '}';
     }
 }

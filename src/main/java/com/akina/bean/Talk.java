@@ -48,7 +48,6 @@ public class Talk {
      * This method returns the value of the database column talk.talk_id
      *
      * @return the value of talk.talk_id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public Integer getTalkId() {
@@ -60,7 +59,6 @@ public class Talk {
      * This method sets the value of the database column talk.talk_id
      *
      * @param talkId the value for talk.talk_id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setTalkId(Integer talkId) {
@@ -72,7 +70,6 @@ public class Talk {
      * This method returns the value of the database column talk.send_user_id
      *
      * @return the value of talk.send_user_id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public Integer getSendUserId() {
@@ -84,7 +81,6 @@ public class Talk {
      * This method sets the value of the database column talk.send_user_id
      *
      * @param sendUserId the value for talk.send_user_id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setSendUserId(Integer sendUserId) {
@@ -96,7 +92,6 @@ public class Talk {
      * This method returns the value of the database column talk.receive_user_id
      *
      * @return the value of talk.receive_user_id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public Integer getReceiveUserId() {
@@ -108,7 +103,6 @@ public class Talk {
      * This method sets the value of the database column talk.receive_user_id
      *
      * @param receiveUserId the value for talk.receive_user_id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setReceiveUserId(Integer receiveUserId) {
@@ -120,7 +114,6 @@ public class Talk {
      * This method returns the value of the database column talk.unread_number
      *
      * @return the value of talk.unread_number
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public Integer getUnreadNumber() {
@@ -132,7 +125,6 @@ public class Talk {
      * This method sets the value of the database column talk.unread_number
      *
      * @param unreadNumber the value for talk.unread_number
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setUnreadNumber(Integer unreadNumber) {
@@ -144,7 +136,6 @@ public class Talk {
      * This method returns the value of the database column talk.create_time
      *
      * @return the value of talk.create_time
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public Date getCreateTime() {
@@ -156,10 +147,32 @@ public class Talk {
      * This method sets the value of the database column talk.create_time
      *
      * @param createTime the value for talk.create_time
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+
+    public Talk(Integer talkId, Integer sendUserId, Integer receiveUserId, Integer unreadNumber, Date createTime) {
+        this.talkId = talkId;
+        this.sendUserId = sendUserId;
+        this.receiveUserId = receiveUserId;
+        this.unreadNumber = unreadNumber;
+        this.createTime = createTime;
+    }
+
+    public Talk() {
+    }
+
+    @Override
+    public String toString() {
+        return "Talk{" +
+                "talkId=" + talkId +
+                ", sendUserId=" + sendUserId +
+                ", receiveUserId=" + receiveUserId +
+                ", unreadNumber=" + unreadNumber +
+                ", createTime=" + createTime +
+                '}';
     }
 }

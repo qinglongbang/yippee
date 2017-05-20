@@ -88,7 +88,6 @@ public class User {
      * This method returns the value of the database column user.user_id
      *
      * @return the value of user.user_id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public Integer getUserId() {
@@ -100,7 +99,6 @@ public class User {
      * This method sets the value of the database column user.user_id
      *
      * @param userId the value for user.user_id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setUserId(Integer userId) {
@@ -112,7 +110,6 @@ public class User {
      * This method returns the value of the database column user.user_name
      *
      * @return the value of user.user_name
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public String getUserName() {
@@ -124,7 +121,6 @@ public class User {
      * This method sets the value of the database column user.user_name
      *
      * @param userName the value for user.user_name
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setUserName(String userName) {
@@ -136,7 +132,6 @@ public class User {
      * This method returns the value of the database column user.user_mail
      *
      * @return the value of user.user_mail
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public String getUserMail() {
@@ -148,7 +143,6 @@ public class User {
      * This method sets the value of the database column user.user_mail
      *
      * @param userMail the value for user.user_mail
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setUserMail(String userMail) {
@@ -160,7 +154,6 @@ public class User {
      * This method returns the value of the database column user.user_pwd
      *
      * @return the value of user.user_pwd
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public String getUserPwd() {
@@ -172,7 +165,6 @@ public class User {
      * This method sets the value of the database column user.user_pwd
      *
      * @param userPwd the value for user.user_pwd
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setUserPwd(String userPwd) {
@@ -184,7 +176,6 @@ public class User {
      * This method returns the value of the database column user.user_pixiv
      *
      * @return the value of user.user_pixiv
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public String getUserPixiv() {
@@ -196,7 +187,6 @@ public class User {
      * This method sets the value of the database column user.user_pixiv
      *
      * @param userPixiv the value for user.user_pixiv
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setUserPixiv(String userPixiv) {
@@ -208,7 +198,6 @@ public class User {
      * This method returns the value of the database column user.user_abstract
      *
      * @return the value of user.user_abstract
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public String getUserAbstract() {
@@ -220,7 +209,6 @@ public class User {
      * This method sets the value of the database column user.user_abstract
      *
      * @param userAbstract the value for user.user_abstract
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setUserAbstract(String userAbstract) {
@@ -232,7 +220,6 @@ public class User {
      * This method returns the value of the database column user.user_head_path
      *
      * @return the value of user.user_head_path
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public String getUserHeadPath() {
@@ -244,7 +231,6 @@ public class User {
      * This method sets the value of the database column user.user_head_path
      *
      * @param userHeadPath the value for user.user_head_path
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setUserHeadPath(String userHeadPath) {
@@ -256,7 +242,6 @@ public class User {
      * This method returns the value of the database column user.user_pay_path
      *
      * @return the value of user.user_pay_path
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public String getUserPayPath() {
@@ -268,7 +253,6 @@ public class User {
      * This method sets the value of the database column user.user_pay_path
      *
      * @param userPayPath the value for user.user_pay_path
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setUserPayPath(String userPayPath) {
@@ -280,7 +264,6 @@ public class User {
      * This method returns the value of the database column user.user_integral
      *
      * @return the value of user.user_integral
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public Integer getUserIntegral() {
@@ -292,7 +275,6 @@ public class User {
      * This method sets the value of the database column user.user_integral
      *
      * @param userIntegral the value for user.user_integral
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setUserIntegral(Integer userIntegral) {
@@ -304,7 +286,6 @@ public class User {
      * This method returns the value of the database column user.create_time
      *
      * @return the value of user.create_time
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public Date getCreateTime() {
@@ -316,10 +297,42 @@ public class User {
      * This method sets the value of the database column user.create_time
      *
      * @param createTime the value for user.create_time
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+
+    public User(Integer userId, String userName, String userMail, String userPwd, String userPixiv, String userAbstract, String userHeadPath, String userPayPath, Integer userIntegral, Date createTime) {
+        this.userId = userId;
+        this.userName = userName;
+        this.userMail = userMail;
+        this.userPwd = userPwd;
+        this.userPixiv = userPixiv;
+        this.userAbstract = userAbstract;
+        this.userHeadPath = userHeadPath;
+        this.userPayPath = userPayPath;
+        this.userIntegral = userIntegral;
+        this.createTime = createTime;
+    }
+
+    public User() {
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", userName='" + userName + '\'' +
+                ", userMail='" + userMail + '\'' +
+                ", userPwd='" + userPwd + '\'' +
+                ", userPixiv='" + userPixiv + '\'' +
+                ", userAbstract='" + userAbstract + '\'' +
+                ", userHeadPath='" + userHeadPath + '\'' +
+                ", userPayPath='" + userPayPath + '\'' +
+                ", userIntegral=" + userIntegral +
+                ", createTime=" + createTime +
+                '}';
     }
 }

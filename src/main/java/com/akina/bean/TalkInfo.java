@@ -56,7 +56,6 @@ public class TalkInfo {
      * This method returns the value of the database column talk_info.talk_info_id
      *
      * @return the value of talk_info.talk_info_id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public Integer getTalkInfoId() {
@@ -68,7 +67,6 @@ public class TalkInfo {
      * This method sets the value of the database column talk_info.talk_info_id
      *
      * @param talkInfoId the value for talk_info.talk_info_id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setTalkInfoId(Integer talkInfoId) {
@@ -80,7 +78,6 @@ public class TalkInfo {
      * This method returns the value of the database column talk_info.talk_info
      *
      * @return the value of talk_info.talk_info
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public String getTalkInfo() {
@@ -92,7 +89,6 @@ public class TalkInfo {
      * This method sets the value of the database column talk_info.talk_info
      *
      * @param talkInfo the value for talk_info.talk_info
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setTalkInfo(String talkInfo) {
@@ -104,7 +100,6 @@ public class TalkInfo {
      * This method returns the value of the database column talk_info.talk_id
      *
      * @return the value of talk_info.talk_id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public Integer getTalkId() {
@@ -116,7 +111,6 @@ public class TalkInfo {
      * This method sets the value of the database column talk_info.talk_id
      *
      * @param talkId the value for talk_info.talk_id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setTalkId(Integer talkId) {
@@ -128,7 +122,6 @@ public class TalkInfo {
      * This method returns the value of the database column talk_info.user_id
      *
      * @return the value of talk_info.user_id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public Integer getUserId() {
@@ -140,7 +133,6 @@ public class TalkInfo {
      * This method sets the value of the database column talk_info.user_id
      *
      * @param userId the value for talk_info.user_id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setUserId(Integer userId) {
@@ -152,7 +144,6 @@ public class TalkInfo {
      * This method returns the value of the database column talk_info.read_flag
      *
      * @return the value of talk_info.read_flag
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public Integer getReadFlag() {
@@ -164,7 +155,6 @@ public class TalkInfo {
      * This method sets the value of the database column talk_info.read_flag
      *
      * @param readFlag the value for talk_info.read_flag
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setReadFlag(Integer readFlag) {
@@ -176,7 +166,6 @@ public class TalkInfo {
      * This method returns the value of the database column talk_info.create_time
      *
      * @return the value of talk_info.create_time
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public Date getCreateTime() {
@@ -188,10 +177,35 @@ public class TalkInfo {
      * This method sets the value of the database column talk_info.create_time
      *
      * @param createTime the value for talk_info.create_time
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+
+    public TalkInfo(Integer talkInfoId, String talkInfo, Integer talkId, Integer userId, Integer readFlag, Date createTime) {
+        this.talkInfoId = talkInfoId;
+        this.talkInfo = talkInfo;
+        this.talkId = talkId;
+        this.userId = userId;
+        this.readFlag = readFlag;
+        this.createTime = createTime;
+    }
+
+    public TalkInfo() {
+    }
+
+
+    @Override
+    public String toString() {
+        return "TalkInfo{" +
+                "talkInfoId=" + talkInfoId +
+                ", talkInfo='" + talkInfo + '\'' +
+                ", talkId=" + talkId +
+                ", userId=" + userId +
+                ", readFlag=" + readFlag +
+                ", createTime=" + createTime +
+                '}';
     }
 }

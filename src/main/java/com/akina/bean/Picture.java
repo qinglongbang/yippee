@@ -96,7 +96,6 @@ public class Picture {
      * This method returns the value of the database column picture.pic_id
      *
      * @return the value of picture.pic_id
-     *
      * @mbggenerated Sun May 21 00:51:46 CST 2017
      */
     public Integer getPicId() {
@@ -108,7 +107,6 @@ public class Picture {
      * This method sets the value of the database column picture.pic_id
      *
      * @param picId the value for picture.pic_id
-     *
      * @mbggenerated Sun May 21 00:51:46 CST 2017
      */
     public void setPicId(Integer picId) {
@@ -120,7 +118,6 @@ public class Picture {
      * This method returns the value of the database column picture.user_id
      *
      * @return the value of picture.user_id
-     *
      * @mbggenerated Sun May 21 00:51:46 CST 2017
      */
     public Integer getUserId() {
@@ -132,7 +129,6 @@ public class Picture {
      * This method sets the value of the database column picture.user_id
      *
      * @param userId the value for picture.user_id
-     *
      * @mbggenerated Sun May 21 00:51:46 CST 2017
      */
     public void setUserId(Integer userId) {
@@ -144,7 +140,6 @@ public class Picture {
      * This method returns the value of the database column picture.pic_name
      *
      * @return the value of picture.pic_name
-     *
      * @mbggenerated Sun May 21 00:51:46 CST 2017
      */
     public String getPicName() {
@@ -156,7 +151,6 @@ public class Picture {
      * This method sets the value of the database column picture.pic_name
      *
      * @param picName the value for picture.pic_name
-     *
      * @mbggenerated Sun May 21 00:51:46 CST 2017
      */
     public void setPicName(String picName) {
@@ -168,7 +162,6 @@ public class Picture {
      * This method returns the value of the database column picture.pic_ispixiv
      *
      * @return the value of picture.pic_ispixiv
-     *
      * @mbggenerated Sun May 21 00:51:46 CST 2017
      */
     public Integer getPicIspixiv() {
@@ -180,7 +173,6 @@ public class Picture {
      * This method sets the value of the database column picture.pic_ispixiv
      *
      * @param picIspixiv the value for picture.pic_ispixiv
-     *
      * @mbggenerated Sun May 21 00:51:46 CST 2017
      */
     public void setPicIspixiv(Integer picIspixiv) {
@@ -192,7 +184,6 @@ public class Picture {
      * This method returns the value of the database column picture.pic_http_path
      *
      * @return the value of picture.pic_http_path
-     *
      * @mbggenerated Sun May 21 00:51:46 CST 2017
      */
     public String getPicHttpPath() {
@@ -204,7 +195,6 @@ public class Picture {
      * This method sets the value of the database column picture.pic_http_path
      *
      * @param picHttpPath the value for picture.pic_http_path
-     *
      * @mbggenerated Sun May 21 00:51:46 CST 2017
      */
     public void setPicHttpPath(String picHttpPath) {
@@ -216,7 +206,6 @@ public class Picture {
      * This method returns the value of the database column picture.pic_floor_price
      *
      * @return the value of picture.pic_floor_price
-     *
      * @mbggenerated Sun May 21 00:51:46 CST 2017
      */
     public String getPicFloorPrice() {
@@ -228,7 +217,6 @@ public class Picture {
      * This method sets the value of the database column picture.pic_floor_price
      *
      * @param picFloorPrice the value for picture.pic_floor_price
-     *
      * @mbggenerated Sun May 21 00:51:46 CST 2017
      */
     public void setPicFloorPrice(String picFloorPrice) {
@@ -240,7 +228,6 @@ public class Picture {
      * This method returns the value of the database column picture.pic_present_price
      *
      * @return the value of picture.pic_present_price
-     *
      * @mbggenerated Sun May 21 00:51:46 CST 2017
      */
     public String getPicPresentPrice() {
@@ -252,7 +239,6 @@ public class Picture {
      * This method sets the value of the database column picture.pic_present_price
      *
      * @param picPresentPrice the value for picture.pic_present_price
-     *
      * @mbggenerated Sun May 21 00:51:46 CST 2017
      */
     public void setPicPresentPrice(String picPresentPrice) {
@@ -264,7 +250,6 @@ public class Picture {
      * This method returns the value of the database column picture.pic_trim_times
      *
      * @return the value of picture.pic_trim_times
-     *
      * @mbggenerated Sun May 21 00:51:46 CST 2017
      */
     public Integer getPicTrimTimes() {
@@ -276,7 +261,6 @@ public class Picture {
      * This method sets the value of the database column picture.pic_trim_times
      *
      * @param picTrimTimes the value for picture.pic_trim_times
-     *
      * @mbggenerated Sun May 21 00:51:46 CST 2017
      */
     public void setPicTrimTimes(Integer picTrimTimes) {
@@ -288,7 +272,6 @@ public class Picture {
      * This method returns the value of the database column picture.pic_ state
      *
      * @return the value of picture.pic_ state
-     *
      * @mbggenerated Sun May 21 00:51:46 CST 2017
      */
     public Integer getPicState() {
@@ -300,7 +283,6 @@ public class Picture {
      * This method sets the value of the database column picture.pic_ state
      *
      * @param picState the value for picture.pic_ state
-     *
      * @mbggenerated Sun May 21 00:51:46 CST 2017
      */
     public void setPicState(Integer picState) {
@@ -312,7 +294,6 @@ public class Picture {
      * This method returns the value of the database column picture.pic_key
      *
      * @return the value of picture.pic_key
-     *
      * @mbggenerated Sun May 21 00:51:46 CST 2017
      */
     public String getPicKey() {
@@ -324,7 +305,6 @@ public class Picture {
      * This method sets the value of the database column picture.pic_key
      *
      * @param picKey the value for picture.pic_key
-     *
      * @mbggenerated Sun May 21 00:51:46 CST 2017
      */
     public void setPicKey(String picKey) {
@@ -336,7 +316,6 @@ public class Picture {
      * This method returns the value of the database column picture.create_time
      *
      * @return the value of picture.create_time
-     *
      * @mbggenerated Sun May 21 00:51:46 CST 2017
      */
     public Date getCreateTime() {
@@ -348,10 +327,44 @@ public class Picture {
      * This method sets the value of the database column picture.create_time
      *
      * @param createTime the value for picture.create_time
-     *
      * @mbggenerated Sun May 21 00:51:46 CST 2017
      */
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+
+    public Picture(Integer picId, Integer userId, String picName, Integer picIspixiv, String picHttpPath, String picFloorPrice, String picPresentPrice, Integer picTrimTimes, Integer picState, String picKey, Date createTime) {
+        this.picId = picId;
+        this.userId = userId;
+        this.picName = picName;
+        this.picIspixiv = picIspixiv;
+        this.picHttpPath = picHttpPath;
+        this.picFloorPrice = picFloorPrice;
+        this.picPresentPrice = picPresentPrice;
+        this.picTrimTimes = picTrimTimes;
+        this.picState = picState;
+        this.picKey = picKey;
+        this.createTime = createTime;
+    }
+
+    public Picture() {
+    }
+
+    @Override
+    public String toString() {
+        return "Picture{" +
+                "picId=" + picId +
+                ", userId=" + userId +
+                ", picName='" + picName + '\'' +
+                ", picIspixiv=" + picIspixiv +
+                ", picHttpPath='" + picHttpPath + '\'' +
+                ", picFloorPrice='" + picFloorPrice + '\'' +
+                ", picPresentPrice='" + picPresentPrice + '\'' +
+                ", picTrimTimes=" + picTrimTimes +
+                ", picState=" + picState +
+                ", picKey='" + picKey + '\'' +
+                ", createTime=" + createTime +
+                '}';
     }
 }

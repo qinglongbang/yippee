@@ -56,7 +56,6 @@ public class UserTrimPrice {
      * This method returns the value of the database column user_trim_price.id
      *
      * @return the value of user_trim_price.id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public Integer getId() {
@@ -68,7 +67,6 @@ public class UserTrimPrice {
      * This method sets the value of the database column user_trim_price.id
      *
      * @param id the value for user_trim_price.id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setId(Integer id) {
@@ -80,7 +78,6 @@ public class UserTrimPrice {
      * This method returns the value of the database column user_trim_price.user_id
      *
      * @return the value of user_trim_price.user_id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public Integer getUserId() {
@@ -92,7 +89,6 @@ public class UserTrimPrice {
      * This method sets the value of the database column user_trim_price.user_id
      *
      * @param userId the value for user_trim_price.user_id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setUserId(Integer userId) {
@@ -104,7 +100,6 @@ public class UserTrimPrice {
      * This method returns the value of the database column user_trim_price.pic_id
      *
      * @return the value of user_trim_price.pic_id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public Integer getPicId() {
@@ -116,7 +111,6 @@ public class UserTrimPrice {
      * This method sets the value of the database column user_trim_price.pic_id
      *
      * @param picId the value for user_trim_price.pic_id
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setPicId(Integer picId) {
@@ -128,7 +122,6 @@ public class UserTrimPrice {
      * This method returns the value of the database column user_trim_price.trim_tape
      *
      * @return the value of user_trim_price.trim_tape
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public Integer getTrimTape() {
@@ -140,7 +133,6 @@ public class UserTrimPrice {
      * This method sets the value of the database column user_trim_price.trim_tape
      *
      * @param trimTape the value for user_trim_price.trim_tape
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setTrimTape(Integer trimTape) {
@@ -152,7 +144,6 @@ public class UserTrimPrice {
      * This method returns the value of the database column user_trim_price.price
      *
      * @return the value of user_trim_price.price
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public Double getPrice() {
@@ -164,7 +155,6 @@ public class UserTrimPrice {
      * This method sets the value of the database column user_trim_price.price
      *
      * @param price the value for user_trim_price.price
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setPrice(Double price) {
@@ -176,7 +166,6 @@ public class UserTrimPrice {
      * This method returns the value of the database column user_trim_price.create_time
      *
      * @return the value of user_trim_price.create_time
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public Date getCreateTime() {
@@ -188,10 +177,34 @@ public class UserTrimPrice {
      * This method sets the value of the database column user_trim_price.create_time
      *
      * @param createTime the value for user_trim_price.create_time
-     *
      * @mbggenerated Sat May 20 23:37:32 CST 2017
      */
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+
+    public UserTrimPrice(Integer id, Integer userId, Integer picId, Integer trimTape, Double price, Date createTime) {
+        this.id = id;
+        this.userId = userId;
+        this.picId = picId;
+        this.trimTape = trimTape;
+        this.price = price;
+        this.createTime = createTime;
+    }
+
+    public UserTrimPrice() {
+    }
+
+    @Override
+    public String toString() {
+        return "UserTrimPrice{" +
+                "id=" + id +
+                ", userId=" + userId +
+                ", picId=" + picId +
+                ", trimTape=" + trimTape +
+                ", price=" + price +
+                ", createTime=" + createTime +
+                '}';
     }
 }
