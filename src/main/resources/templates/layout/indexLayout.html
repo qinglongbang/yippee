@@ -15,14 +15,78 @@
         flex: 1 0 auto;
     }
 
+    #head_menu {
+        height: 150px;
+    }
+
+    .sys_head {
+        margin-top: 8%;
+    }
+
+    .light-blue.accent-3 {
+
+        background-color: white !important;
+    }
+
+    .light-blue.accent-2 {
+        background-color:white !important;
+    }
+
+    .modal-overlay {
+        background: #0f88eb;
+    }
+
+    #html_nav {
+        position: fixed;
+        z-index: 999;
+    }
+
+
 </style>
+<!-- 页头部 -->
+<div th:fragment="head_layout">
+    <!-- 頭部内容放在这里 -->
+    <nav class="#00b0ff light-blue accent-3" id="html_nav">
+        <div class="nav-wrapper container">
+            <a href="#" data-activates="mobile-demo" class="button-collapse">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <!--<li><a href="#">登陆</a></li>-->
+                <!--<li><a href="#">注册</a></li>-->
+                <!-- 登陆后就只显示用户名 -->
+                <li>
+                    <a class="#eeeeee grey-text lighten-3" href="#" id="user_name">王小明</a>
+                </li>
+                <li>
+                    <a class="#eeeeee grey-text lighten-3" href="#" >首页</a>
+                </li>
+                <li>
+                    <a class="#eeeeee grey-text lighten-3" href="#" >看图</a>
+                </li>
+            </ul>
+            <!-- 手机菜单 -->
+            <ul class="side-nav" id="mobile-demo">
+                <!-- 手机菜单同上 -->
+                <li><a href="#">登陆</a></li>
+                <li><a href="#">注册</a></li>
+
+
+                <li><a href="#">首页</a></li>
+                <li><a href="#">看图</a></li>
+            </ul>
+        </div>
+    </nav>
+
+</div>
+
 
 <!-- 頁腳 -->
 <div th:fragment="footer_layout">
     <div class="container  ">
         <div class="row">
             <div class="col l6 s12">
-                <h5 class="white-text">页脚内容</h5>
+                <h5 class=" #212121 grey-text darken-4" >页脚内容</h5>
                 <!--  <p class="grey-text text-lighten-4">你可以用行和列来组织你的页脚内容。</p>-->
             </div>
         </div>

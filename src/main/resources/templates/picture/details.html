@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Yippee | 详情</title>
+    <!--Import Google Icon Font   http://fonts.useso.com/-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/materialize/css/materialize.min.css" media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--引入网页logo-->
+    <link rel="icon" type="image/x-icon" href="/img/logo/logo.png">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- 黏性頁腳支持 -->
+    <style type="text/css" th:include="layout/indexLayout::footer_css"></style>
+    <style type="text/css">
+        .head_image {
+            border-radius: 18px;
+        }
+
+        .card.horizontal .card-image {
+            max-width: 10%;
+        }
+
+        article, aside, figure, footer, header, hgroup,
+        menu, nav, section {
+            display: block;
+        }
+
+
+
+
+
+        .comment {
+            overflow: hidden;
+            padding: 0 0 1em;
+            border-bottom: 1px solid #ddd;
+            margin: 0 0 1em;
+            *zoom: 1;
+        }
+
+        .comment-img {
+            float: left;
+            margin-right: 33px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .comment-img img {
+            display: block;
+        }
+
+        .comment-body {
+            overflow: hidden;
+        }
+
+        .comment .text {
+            padding: 10px;
+            border: 1px solid #e5e5e5;
+            border-radius: 5px;
+            background: #fff;
+        }
+
+        .comment .text p:last-child {
+            margin: 0;
+        }
+
+        .comment .attribution {
+            margin: 0.5em 0 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Decoration */
+
+        .comments,
+        .comment {
+            position: relative;
+        }
+
+        .comments:before,
+        .comment:before,
+        .comment .text:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 65px;
+        }
+
+        .comments:before {
+            width: 3px;
+            top: 0px;
+            bottom: 0px;
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .comment:before {
+            width: 9px;
+            height: 9px;
+            border: 3px solid #fff;
+            border-radius: 100px;
+            margin: 16px 0 0 -6px;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(0, 0, 0, 0.1);
+            background: #ccc;
+        }
+
+        .comment:hover:before {
+            background: orange;
+        }
+
+        .comment .text:before {
+            top: 18px;
+            left: 78px;
+            width: 9px;
+            height: 9px;
+            border-width: 0 0 1px 1px;
+            border-style: solid;
+            border-color: #e5e5e5;
+            background: #fff;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+<!-- 页头 -->
+<header th:include="layout/indexLayout::head_layout"></header>
+<main>　
+
+    <div class="container" style="min-width: 1200px" >
+
+        <!--详情页面-->
+        <div class="row z-depth-1 #fafafa grey lighten-5 " style="margin-top: 100px;border-radius: 3px;">
+            <div class=" col s6  ">
+                <img class="materialboxed responsive-img " style="margin-left: -12px"
+                     src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495709299&di=fb7e6248a1c581dbfe124a81b3a9c917&imgtype=jpg&er=1&src=http%3A%2F%2Fandroid-wallpapers.25pp.com%2Ffs01%2F2015%2F05%2F04%2F4%2F2000_3ce082e1bed13b2ab5d6732fbd6bfbfa_900x675.jpg">
+            </div>
+            <div class=" col s5 " style="margin-left: 20px;margin-top: 40px ;border-left: 1px solid gainsboro">
+                <div class="row">
+                    <div style="margin-left: 20px" class="col s7 ">
+                        <h5 style="border-left: 20px">作品名称</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <div class="row" style="width: 172px;margin-left: 20px">
+                            <span class="badge #f5f5f5 grey-text lighten-4" data-badge-caption="">简介画师</span>
+                            <span>画师ID</span>
+                        </div>
+                        <div class="row" style="width: 322px;margin-left: 20px">
+                            <span class="badge" data-badge-caption="">1232132132131231231231312</span>
+                            <span class="#f5f5f5 grey-text lighten-4">编号：</span>
+                        </div>
+                        <div class="row" style="width: 150px;margin-left: 20px">
+                            <span class="badge hoverable" data-badge-caption="￥">20</span>
+                            <span class="#f5f5f5 grey-text lighten-4">报价</span>
+                        </div>
+                        <div class="row" style="width: 150px;margin-left: 20px">
+                            <span class="new badge hoverable blue" data-badge-caption="￥">20</span>
+                            <span class="#f5f5f5 grey-text lighten-4">当前</span>
+                        </div>
+                        <div class="row" style="width: 150px;margin-left: 20px">
+                            <span class="badge hoverable" data-badge-caption="次">20</span>
+                            <span class="#f5f5f5 grey-text lighten-4">价格变动</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        <a style="margin-left:-10px"
+                           class="waves-effect waves-teal btn-flat #eeeeee grey-text lighten-3">
+                            <i class="material-icons right">language</i>购买/下载
+                        </a>
+                    </div>
+                    <div class="col s6">
+                        <a style="margin-left:0px" class="waves-effect waves-teal btn-flat #eeeeee grey-text lighten-3">
+                            下调↓/上升↑
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!--评论-->　
+        <div  class=""  style="width: 700px;background-color: white;border-radius: 3px;">
+            <section class="comments"  >
+                <article class="comment">
+                    <a class="comment-img" href="#non">
+                        <img src="https://pic3.zhimg.com/v2-bc784912789de2dd3f9d9b02324b95b2_xl.jpg" alt="" width="50" height="50">
+                    </a>
+                    <div class="comment-body">
+                        <div class="text">
+                            <p>评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论</p>
+                        </div>
+                        <p class="attribution">by
+                            <a href="#non">评论人姓名</a> at 14:23pm, 4th Dec 2010</p>
+                    </div>
+                </article>
+              <article class="comment">
+                    <a class="comment-img" href="#non">
+                        <img src="https://pic3.zhimg.com/v2-bc784912789de2dd3f9d9b02324b95b2_xl.jpg" alt="" width="50" height="50">
+                    </a>
+                    <div class="comment-body">
+                        <div class="text">
+                            <p>评论评论评论评论评论评论评论</p>
+                        </div>
+                        <p class="attribution">by
+                            <a href="#non">评论人姓名</a> at 14:23pm, 4th Dec 2010</p>
+                    </div>
+                </article>
+              <article class="comment">
+                    <a class="comment-img" href="#non">
+                        <img src="https://pic3.zhimg.com/v2-bc784912789de2dd3f9d9b02324b95b2_xl.jpg" alt="" width="50" height="50">
+                    </a>
+                    <div class="comment-body">
+                        <div class="text">
+                            <p>评论评论评论评论评论评论评论</p>
+                        </div>
+                        <p class="attribution">by
+                            <a href="#non">评论人姓名</a> at 14:23pm, 4th Dec 2010</p>
+                    </div>
+                </article>
+              <article class="comment">
+                    <a class="comment-img" href="#non">
+                        <img src="https://pic3.zhimg.com/v2-bc784912789de2dd3f9d9b02324b95b2_xl.jpg" alt="" width="50" height="50">
+                    </a>
+                    <div class="comment-body">
+                        <div class="text">
+                            <p>评论评论评论评论评论评论评论</p>
+                        </div>
+                        <p class="attribution">by
+                            <a href="#non">评论人姓名</a> at 14:23pm, 4th Dec 2010</p>
+                    </div>
+                </article>
+              <article class="comment">
+                    <a class="comment-img" href="#non">
+                        <img src="https://pic3.zhimg.com/v2-bc784912789de2dd3f9d9b02324b95b2_xl.jpg" alt="" width="50" height="50">
+                    </a>
+                    <div class="comment-body">
+                        <div class="text">
+                            <p>评论评论评论评论评论评论评论</p>
+                        </div>
+                        <p class="attribution">by
+                            <a href="#non">评论人姓名</a> at 14:23pm, 4th Dec 2010</p>
+                    </div>
+                </article>
+              <article class="comment">
+                    <a class="comment-img" href="#non">
+                        <img src="https://pic3.zhimg.com/v2-bc784912789de2dd3f9d9b02324b95b2_xl.jpg" alt="" width="50" height="50">
+                    </a>
+                    <div class="comment-body">
+                        <div class="text">
+                            <p>评论评论评论评论评论评论评论</p>
+                        </div>
+                        <p class="attribution">by
+                            <a href="#non">评论人姓名</a> at 14:23pm, 4th Dec 2010</p>
+                    </div>
+                </article>
+            </section>
+        </div>
+        <!--发布评论-->
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="row ">
+            <div class="col s7 #3949ab indigo darken-1">
+                <div class="row">
+                    <div class="col s12 ">
+                        <div class="row">
+                            <div class="col s12">
+                                <h5 class="#ffffff white-text">评论</h5>
+                                <span class="#ffffff white-text">随便说点什么吧</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class=" col s12">
+                                <input placeholder="留下点评论怎么样" type="text" class="validate #ffffff white-text">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class=" col s6 offset-s3">
+                                <a class="waves-effect waves-teal btn-flat #ffffff white-text">按钮</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</main>
+<!-- 通用頁腳  -->
+<footer  style="min-width: 1200px" class="page-footer #00b0ff light-blue accent-3" th:include="layout/indexLayout::footer_layout"></footer>
+
+<!-- 框架支持 -->
+<div th:replace="layout/indexLayout::ImportJS"></div>
+</body>
+</html>

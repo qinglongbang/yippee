@@ -1,8 +1,7 @@
 package com.akina.service;
 
 import com.akina.bean.Comment;
-
-import java.util.List;
+import com.akina.util.bean.CutPageBean;
 
 /**
  * @Creator Akina
@@ -10,18 +9,19 @@ import java.util.List;
  * @Time 2017-5-16 -  17:14
  * @Describe ： 用户评论业务
  */
-public interface CommentService {
+public interface ICommentService {
 
 
     /**
-     * 按照图片id查询评论集合
+     * 按照图片id,分页获得评论集合
      *
      * @param pic_id
      * @return
      */
-    List<Comment> findByPicId(Integer pic_id);
+    CutPageBean findByPicId(Integer pic_id);
 
     /***
+     * sql已经写好
      * 添加评论
      * @param comment 评论实体
      * @return

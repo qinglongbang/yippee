@@ -2,7 +2,7 @@ package com.akina.service;
 
 import com.akina.bean.Picture;
 import com.akina.util.bean.CutPageBean;
-import com.akina.util.bean.PayBean;
+import com.akina.util.bean.TrimBean;
 
 import java.util.List;
 
@@ -12,22 +12,52 @@ import java.util.List;
  * @Time 2017-5-16 -  16:35
  * @Describe ： 图片业务
  */
-public interface PictureService {
+public interface IPictureService {
+
+
+    /**
+     * 按照id查询
+     *
+     * @return 返回画实体
+     */
+    Picture findByid();
+
+    /***
+     * 投稿：添加pic
+     * @param picture 图片
+     * @return
+     */
+    Boolean addPic(Picture picture);
+
+
+    /***
+     * 编辑画的信息（只有作者才能编辑）
+     * @param picture
+     */
+    void updatePicMassage(Picture picture);
+
 
     /**
      * 根据喜欢还有想购买的人数查询前20  取五位随机数   返回
      *
-     * @return 图片集合
+     * @return 图片集合  首页滚屏展示
      */
     List<Picture> findTopPic();
 
 
     /***
-     *根据状态展示展示前5
-     * @param pic_stat 图片状态
+     *根据价格排序展示展示前5
      * @return 返回查询集合
      */
-    List<Picture> findPicByPram(Integer pic_stat);
+    List<Picture> findPicByPram();
+
+
+    /**
+     * 根据投稿时间展示前5
+     *
+     * @return
+     */
+    List<Picture> findPicByTime();
 
 
     /**
@@ -50,15 +80,8 @@ public interface PictureService {
      * @param price         是都按照价格排序
      * @return
      */
-    CutPageBean findPicByPageAndPram(Integer pic_stat, Integer page_no, String s_str, Boolean time, Boolean like_number, Boolean price);
+    CutPageBean findPicByPageAndPram(Integer page_no, Integer pic_stat, String s_str, Boolean time, Boolean like_number, Boolean price);
 
-
-    /**
-     * 按照id查询
-     *
-     * @return 返回画实体
-     */
-    Picture findByid();
 
     /**
      * 用户后台查看自己的画
@@ -72,6 +95,7 @@ public interface PictureService {
 
     /**
      * 用户后台查看自己买到的画
+     * 暂时不用实现
      *
      * @param page_no 页码
      * @param user_id 买家id
@@ -81,30 +105,29 @@ public interface PictureService {
 
 
     /***
-     * 投稿：添加pic
-     * @param picture 图片
-     * @return
+     * 提价
+     *
+     * 1. UserTrimPrice表里面增加一条数据
+     * 2. pic表pic_trim_times+1
+     * 3. pic_present_price 上升4%
+     * @param user_id 用户id
+     * @param pic_id  画id
+     * @return 返回价格调整实体
      */
-    Boolean addPic(Picture picture);
+    TrimBean addPrive(Integer user_id, Integer pic_id);
 
 
     /***
-     * 提价
+     * 减价
+     *
+     * 1. UserTrimPrice表里面增加一条数据
+     * 2. pic表pic_trim_times+1
+     * 3. pic_present_price 下降2%
      * @param user_id 用户id
      * @param pic_id  画id
-     * @return 返回购买实体
+     * @return 返回价格调整实体
      */
-    PayBean want_pay(Integer user_id, Integer pic_id);
+    TrimBean reducePrive(Integer user_id, Integer pic_id);
 
-    /**
-     * 授予购买权限
-     *
-     * @param user_id
-     * @return
-     */
-    Boolean give_pay(Integer user_id);
-
-
-    
 
 }

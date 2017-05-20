@@ -14,24 +14,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class IndexController {
     /**
-     * 跳轉至歡迎頁面
+     * 登录界面
      *
      * @return
      */
-    @RequestMapping("/")
+    @RequestMapping("login")
     public String welcome() {
-        return StaticStr.WELCOME;
+        return StaticStr.USER_LOGIN;
     }
-
-
-    /**
-     * 跳轉至主頁面
-     *
-     * @return
-     */
-    @RequestMapping("index")
-    public String index() {
-        return StaticStr.SYS_INDEX;
-    }
-
+    
 }

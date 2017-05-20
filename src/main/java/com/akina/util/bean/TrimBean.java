@@ -4,23 +4,32 @@ package com.akina.util.bean;
  * @Creator Akina
  * @packge
  * @Time 2017-5-16 -  16:50
- * @Describe ： 购买实体
+ * @Describe ： 价格调整实体
  */
-public class PayBean {
+public class TrimBean {
 
+    /**
+     * 参与调价用户头像
+     */
     private String pay_user_head_path;
+
+    /**
+     * 调整价格后的价格
+     */
     private Integer now_price;
-    private Integer plus_times;
 
+    /***
+     * 调整时间
+     */
+    private Integer trim_times;
 
-    public PayBean(String pay_user_head_path, Integer now_price, Integer plus_times) {
+    public TrimBean(String pay_user_head_path, Integer now_price, Integer trim_times) {
         this.pay_user_head_path = pay_user_head_path;
         this.now_price = now_price;
-        this.plus_times = plus_times;
+        this.trim_times = trim_times;
     }
 
-
-    public PayBean() {
+    public TrimBean() {
     }
 
     public String getPay_user_head_path() {
@@ -39,12 +48,12 @@ public class PayBean {
         this.now_price = now_price;
     }
 
-    public Integer getPlus_times() {
-        return plus_times;
+    public Integer getTrim_times() {
+        return trim_times;
     }
 
-    public void setPlus_times(Integer plus_times) {
-        this.plus_times = plus_times;
+    public void setTrim_times(Integer trim_times) {
+        this.trim_times = trim_times;
     }
 }
 

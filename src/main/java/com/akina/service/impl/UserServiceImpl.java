@@ -3,6 +3,7 @@ package com.akina.service.impl;
 import com.akina.bean.User;
 import com.akina.mapper.UserMapper;
 import com.akina.service.IUserService;
+import com.akina.util.CommonUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +22,7 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public User Login(String mail, String pwd) {
-        return null;
+        return userMapper.selectUserBypram(mail, CommonUtil.GetMD5(pwd));
     }
 
     @Override
@@ -29,8 +30,4 @@ public class UserServiceImpl implements IUserService {
         return null;
     }
 
-    @Override
-    public User findById(Integer user_id) {
-        return userMapper.selectByPrimaryKey(user_id);
-    }
 }

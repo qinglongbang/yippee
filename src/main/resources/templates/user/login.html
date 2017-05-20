@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yippee | 登陆</title>
+    <!--Import Google Icon Font   http://fonts.useso.com/-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/materialize/css/materialize.min.css" media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--引入网页logo-->
+    <link rel="icon" type="image/x-icon" href="/img/logo/logo.png">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- 黏性頁腳支持 -->
+    <style type="text/css" th:include="layout/indexLayout::footer_css"></style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        #myCanvas {
+            border: 1px;
+            background-color: white;
+        }
+
+        #glasspane {
+            width: 700px;
+            position: absolute;
+            left: 10%;
+            top: 10%;
+
+        }
+
+        /*表单控件元素颜色*/
+        /* label focus color */
+        .input-field input[type=text]:focus + label {
+            color: #ece5ce;
+        }
+
+        /* label underline focus color */
+        .input-field input[type=text]:focus {
+            border-bottom: 1px solid #ece5ce;
+            /*输入框选中后下边框颜色*/
+            box-shadow: 0 1px 0 0 #ece5ce;
+        }
+
+        /* label focus color */
+        .input-field input[type=password]:focus + label {
+            color: #ece5ce;
+        }
+
+        /* label underline focus color */
+        .input-field input[type=password]:focus {
+            border-bottom: 1px solid #ece5ce;
+            /*输入框选中后下边框颜色*/
+            box-shadow: 0 1px 0 0 #ece5ce;
+        }
+
+        /*标签控件元素*/
+        .tabs .tab a:hover, .tabs .tab a.active {
+            color: #ece5ce;
+        }
+
+        .tabs .indicator {
+            background-color: #ece5ce;
+        }
+
+        .submit_btn_login {
+            background-color: #ece5ce !important;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <!-- 頭部内容放在这里 -->
+
+</header>
+<main>
+    <!-- 登陆模块开始 -->
+    <div id="glasspane">
+        <div class="row">
+            <img class="col s6" src="/img/logo/login_logo.png">
+        </div>
+        <div class="row">
+            <div class="col s12 ">
+                <ul class="tabs tabs-fixed-width">
+                    <li class="tab col s3 "><a class="active  " href="#test1">登陆</a></li>
+                    <li class="tab col s3"><a href="#test2">注册</a></li>
+                </ul>
+            </div>
+            <div id="test1" class="col s12">
+                <form action="#" method="post" class="hoverable">
+                    <br><br>
+                    <div class="row">
+                        <div class="input-field col s8">
+                            <input id="login_mail" type="text" class="validate">
+                            <label for="login_mail">邮箱</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s8">
+                            <input id="login_pwd" type="password" class="validate">
+                            <label for="login_pwd">密码</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="btn waves-effect waves-light col s4 offset-s1 submit_btn_login" type="submit"
+                                name="action">
+                            登陆
+                            <i class="material-icons right">send</i>
+                        </button>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </form>
+
+            </div>
+            <div id="test2" class="col s12">
+                <form action="#" method="post" class="hoverable">
+                    <br><br>
+                    <div class="row">
+                        <div class="input-field col s8">
+                            <input id="reg_mail" type="text" class="validate">
+                            <label for="reg_mail">邮箱</label>
+                        </div>
+                        <div class="input-field col s3 offset-s1">
+                            <a class="waves-effect waves-light btn #ffd180 orange accent-1">发送验证码</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s8">
+                            <input id="reg_pwd" type="password" class="validate">
+                            <label for="reg_pwd">密码</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s8">
+                            <input id="reg_yanzheng" type="text" class="validate">
+                            <label for="reg_yanzheng">验证码</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="btn waves-effect waves-light col s4 offset-s1 submit_btn_login" type="submit"
+                                name="action">
+                            注册
+                            <i class="material-icons right">send</i>
+                        </button>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- 登陆模块结束 -->
+
+    <canvas id="myCanvas"></canvas>
+    <script type="text/javascript">
+        //获取窗口宽高
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        //设置画布宽高与窗口宽高一样
+        canvas.width = w;
+        canvas.height = h;
+        //随机数函数
+        function fnRandom(min, max) {
+            return parseInt((max - min) * Math.random() + min + 1)
+        }
+        function Round() {
+            this.r = fnRandom(10, 30);
+            this.diam = this.r * 2;
+            //随机位置
+            var x = fnRandom(0, canvas.width - this.r);
+            this.x = x < this.r ? this.r : x;
+            var y = fnRandom(0, canvas.height - this.r);
+            this.y = y < this.r ? this.r : y
+            //随机速度
+            var speed = fnRandom(2, 4) / 10
+            this.speedX = fnRandom(0, 4) > 2 ? speed : -speed;
+            this.speedY = fnRandom(0, 4) > 2 ? speed : -speed;
+            //颜色
+
+            this.color = "#f5f5f5";
+        }
+        Round.prototype.draw = function () {
+            //绘制函数
+            ctx.fillStyle = this.color;
+            ctx.beginPath()
+            ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2, true);
+            ctx.closePath();
+            ctx.fill();
+        }
+        Round.prototype.move = function () {
+            this.x += this.speedX;
+            if (this.x > canvas.width - this.r) {
+//				this.speedX*=-1;
+                this.x = this.r
+
+            } else if (this.x < this.r) {
+                this.x = canvas.width - this.r
+            }
+            this.y += this.speedY;
+            if (this.y > canvas.height - this.r) {
+//				this.speedY*=-1;
+                this.y = this.r
+            } else if (this.y < this.r) {
+                this.y = canvas.height - this.r
+            }
+        }
+        //使用Round
+        var allRound = [];
+        function initRound() {
+            //初始化30个圆形对象,放到数组中
+            for (var i = 0; i < 30; i++) {
+                var obj = new Round();
+                obj.draw();
+                obj.move();
+                allRound.push(obj);
+
+
+            }
+        }
+        initRound();
+        var dxdy = []
+        function roundMove() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            //遍历所有的圆形对象,让对象自己重绘,移动
+            for (var i = 0; i < allRound.length; i++) {
+                var round = allRound[i];
+                round.draw();
+                round.move();
+
+                dxdy[i] = {
+                    dx: round.x,
+                    dy: round.y
+                };
+                var dx = dxdy[i].dx;
+                var dy = dxdy[i].dy;
+                for (var j = 0; j < i; j++) {
+                    var sx = dxdy[j].dx;
+                    var sy = dxdy[j].dy;
+                    l = Math.sqrt((dx - sx) * (dx - sx) + (dy - sy) * (dy - sy));
+                    var C = 1 / l * 7 - 0.009;
+                    var o = C > 0.03 ? 0.03 : C;
+                    ctx.strokeStyle = 'rgba(0,0,0,' + o + ')'
+                    ctx.beginPath()
+                    ctx.lineWidth = 2;
+                    ctx.moveTo(dxdy[i].dx, dxdy[i].dy)
+                    ctx.lineTo(dxdy[j].dx, dxdy[j].dy);
+                    ctx.closePath()
+                    ctx.stroke()
+
+
+                }
+            }
+            window.requestAnimationFrame(roundMove)
+        }
+        roundMove();
+    </script>
+</main>
+
+
+<!-- 框架支持 -->
+<div th:replace="layout/indexLayout::ImportJS"></div>
+<script type="text/javascript" src="/js/index.js"></script>
+<!-- loding模块 -->
+<div id="loding" class="modal">
+    <div class="progress">
+        <div class="indeterminate"></div>
+    </div>
+</div>
+
+</body>
+</html>
