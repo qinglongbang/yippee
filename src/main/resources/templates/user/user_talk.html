@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Yippee | 私信</title>
+    <!--Import Google Icon Font   http://fonts.useso.com/-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/materialize/css/materialize.min.css" media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--引入网页logo-->
+    <link rel="icon" type="image/x-icon" href="/img/logo/logo.png">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- 黏性頁腳支持 -->
+    <style type="text/css" th:include="layout/indexLayout::footer_css"></style>
+    <style type="text/css">
+        .light-blue.accent-2 {
+            background-color: #c5c5c5 !important;
+        }
+    </style>
+</head>
+<body>
+<!-- 页头 -->
+<header th:include="layout/indexLayout::head_layout"></header>
+<div class="#40c4ff light-blue accent-2" id="head_menu" style="margin-top: 50px;min-width: 1200px">
+    <div class="container">
+        <div class="row">
+            <img class="col s1 sys_head" src="/img/logo/login_logo.png">
+            <div class="col s1 "></div>
+        </div>
+    </div>
+</div>
+<main>
+    　
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+
+            <div class="col s12 m4 l3">
+                <ul class="section table-of-contents">
+                    <li><a>pic</a></li>
+                    <li><a>私信</a></li>
+                    <li><a>投稿</a></li>
+                </ul>
+            </div>
+
+            <div class="col s12 m8 l9">
+                <div class="divider"></div>
+                <div class="section ">
+                    <h5><a>用户姓名</a><span class="badge">1995-04-02 13:11</span></h5>
+                    <p class="#eeeeee grey-text lighten-3">最新一句的内容</p>
+                    <a class="#eeeeee grey-text lighten-3">查看对话<span
+                            class="badge  #536dfe indigo-text accent-2">删除对话</span></a>
+                </div>
+
+                <div class="divider"></div>
+                <div class="section ">
+                    <h5><a>用户姓名</a><span class="badge">1995-04-02 13:11</span></h5>
+                    <p class="#eeeeee grey-text lighten-3">最新一句的内容</p>
+                    <a class="#eeeeee grey-text lighten-3">查看对话<span
+                            class="badge  #536dfe indigo-text accent-2">删除对话</span></a>
+                </div>
+
+
+                <div class="divider"></div>
+                <div class="section ">
+                    <h5><a>用户姓名</a><span class="badge">1995-04-02 13:11</span></h5>
+                    <p class="#eeeeee grey-text lighten-3">最新一句的内容</p>
+                    <a class="#eeeeee grey-text lighten-3">查看对话<span
+                            class="badge  #536dfe indigo-text accent-2">删除对话</span></a>
+                </div>
+
+
+                <div class="divider"></div>
+                <div class="section ">
+                    <h5><a>用户姓名</a><span class="badge">1995-04-02 13:11</span></h5>
+                    <p class="#eeeeee grey-text lighten-3">最新一句的内容</p>
+                    <a class="#eeeeee grey-text lighten-3">查看对话<span
+                            class="badge  #536dfe indigo-text accent-2">删除对话</span></a>
+                </div>
+
+
+                <div class="divider"></div>
+                <div class="section ">
+                    <h5><a>用户姓名</a><span class="badge">1995-04-02 13:11</span></h5>
+                    <p class="#eeeeee grey-text lighten-3">最新一句的内容</p>
+                    <a class="#eeeeee grey-text lighten-3">查看对话<span
+                            class="badge  #536dfe indigo-text accent-2">删除对话</span></a>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</main>
+<!-- 通用頁腳  -->
+<footer style="min-width: 1200px" class="page-footer #00b0ff light-blue accent-3"
+        th:include="layout/indexLayout::footer_layout"></footer>
+<!-- 框架支持 -->
+<div th:replace="layout/indexLayout::ImportJS"></div>
+</body>
+</html>

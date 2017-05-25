@@ -30,4 +30,18 @@ public class StaticStr {
     public static String PICTURE_DETAILS = "picture/details";
     public static String PICTURE_DETAILS2 = "picture/details2";
 
+    public static String PIC_LIST = "picture/piclist";
+
+
+    /**
+     * 个人主页
+     */
+    public static String USER_CENTE = "user/user_cente";
+
+    public static String USER_TALK = "user/user_talk";
+
+    public static String USER_TALK_INFO = "user/user_talk_info";
+
+    public static String USER_SUBMISSION = "user/submission";
+
 }

@@ -1,6 +1,7 @@
 package com.akina.controller;
 
 import com.akina.service.IUserService;
+import com.akina.util.MailUtil;
 import com.akina.util.StaticStr;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,10 +24,45 @@ public class UserController {
     private IUserService iUserService;
 
 
-    @RequestMapping("index")
-    public String user_welcome() {
-        return StaticStr.SYS_INDEX;
+    /**
+     * 登录界面
+     *
+     * @return
+     */
+    @RequestMapping("login")
+    public String welcome() {
+        return StaticStr.USER_LOGIN;
     }
 
-    
+
+    /**
+     * 跳转至个人中心页面
+     *
+     * @return
+     */
+    @RequestMapping("cente")
+    public String myCente() {
+//        //测试代码
+//        new MailUtil().sendSimpleMail("13550196274@163.com", "测试", "您的验证码为123213");
+        return StaticStr.USER_CENTE;
+    }
+
+
+    @RequestMapping("talk")
+    public String talk() {
+        return StaticStr.USER_TALK;
+    }
+
+
+    @RequestMapping("talkInfo")
+    public String talkInfo() {
+        return StaticStr.USER_TALK_INFO;
+    }
+
+
+    @RequestMapping("subm")
+    public String submission() {
+        return StaticStr.USER_SUBMISSION;
+    }
+
 }

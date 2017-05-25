@@ -13,14 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class IndexController {
-    /**
-     * 登录界面
-     *
-     * @return
-     */
-    @RequestMapping("login")
-    public String welcome() {
-        return StaticStr.USER_LOGIN;
+
+    @RequestMapping("index")
+    public String user_welcome() {
+        return StaticStr.SYS_INDEX;
     }
-    
 }

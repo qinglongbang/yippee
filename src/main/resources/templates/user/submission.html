@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Yippee | 投稿</title>
+    <!--Import Google Icon Font   http://fonts.useso.com/-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/materialize/css/materialize.min.css" media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--引入网页logo-->
+    <link rel="icon" type="image/x-icon" href="/img/logo/logo.png">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- 黏性頁腳支持 -->
+    <style type="text/css" th:include="layout/indexLayout::footer_css"></style>
+    <style type="text/css">
+        .light-blue.accent-2 {
+            background-color: #c5c5c5 !important;
+        }
+    </style>
+</head>
+<body>
+<!-- 页头 -->
+<header th:include="layout/indexLayout::head_layout"></header>
+<div class="#40c4ff light-blue accent-2" id="head_menu" style="margin-top: 50px;min-width: 1200px">
+    <div class="container">
+        <div class="row">
+            <img class="col s1 sys_head" src="https://pic3.zhimg.com/v2-bc784912789de2dd3f9d9b02324b95b2_xl.jpg">
+            <div class="col s4 sys_head ">
+                简介简介简介简介简介简介简介简介简介简介
+            </div>
+        </div>
+    </div>
+</div>
+<main>
+    　
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+
+            <div class="col s12 m4 l3">
+                <ul class="section table-of-contents">
+                    <li><a>pic</a></li>
+                    <li><a>私信</a></li>
+                    <li><a>投稿</a></li>
+                </ul>
+            </div>
+
+            <div class="col s12 m8 l9">
+                <div class="row">
+                    <div class="input-field  hide-on-small-only">
+                        <img style="max-width: 400px" id="image_head_pc" class="responsive-img materialboxed">
+                    </div>
+                    <div class="col  s12">
+                        <div class=" file-field input-field">
+                            <div class="btn ">
+                                <span>文件</span>
+                                <input placeholder="请上传png或jpg格式的图片"
+                                       name="img_file"
+                                       onchange="preImg('img_file','image_head_pc')"
+                                       id="img_file"
+                                       type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" id="pic_name" name="pic_name" class="validate">
+                        <label for="pic_name">作品名称</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" id="pic_price" name="pic_price" class="validate">
+                        <label for="pic_price">初始定价：￥</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <label for="textarea1">作品简介</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">提交
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    </div>
+</main>
+<!-- 通用頁腳  -->
+<footer style="min-width: 1200px" class="page-footer #00b0ff light-blue accent-3"
+        th:include="layout/indexLayout::footer_layout"></footer>
+<!-- 框架支持 -->
+<div th:replace="layout/indexLayout::ImportJS"></div>
+<script src="/js/user/submission.js"></script>
+</body>
+</html>

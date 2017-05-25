@@ -16,22 +16,22 @@ public interface ITalkService {
 
     /***
      * 用户获取所有属于自己的会话
-     * @return
+     * @return 返回会话列表
      */
     List<Talk> findAll(Integer user_id);
 
     /***
      * 按照会话id查询 所有会话内容
      * 1.查询完成，把所属会话表记录的 unread_numberint(11)会话所属内容未读条数归零
-     * @param talk_id
-     * @return
+     * @param talk_id 会话id
+     * @return 返回会话列表
      */
     List<TalkInfo> findById(Integer talk_id);
 
     /***
      * 发送消息
      * 1  发送完毕，把所属会话表记录的 unread_numberint(11)会话所属内容未读条数+1
-     * @param info
+     * @param info 消息实体
      */
     void sendMassage(TalkInfo info);
 
@@ -40,7 +40,7 @@ public interface ITalkService {
      * 查询所有的未读消息有几条
      * 对talk的 unread_numberint字段count
      *
-     * @return
+     * @return 消息条数
      */
     Integer findUnreadNumber();
 

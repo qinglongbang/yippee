@@ -23,20 +23,17 @@ public class PictureController {
      */
     @RequestMapping("details")
     public String details(Integer pic_id) {
-//        System.out.println(pic_id);
         return StaticStr.PICTURE_DETAILS;
     }
 
-    /**
-     * 跳转详情页面
-     *
-     * @param pic_id 图片id
-     * @return 图片详情页面
+
+    /***
+     * 跳转到列表
+     * @return
      */
-    @RequestMapping("details2")
-    public String details2(Integer pic_id) {
-//        System.out.println(pic_id);
-        return StaticStr.PICTURE_DETAILS2;
+    @RequestMapping("list")
+    public String picList() {
+        return StaticStr.PIC_LIST;
     }
 
 

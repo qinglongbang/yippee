@@ -202,7 +202,6 @@ public class CommonUtil {
             }
             return weekOfDays[w];
         } catch (ParseException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
             return null;
         }
@@ -391,7 +390,6 @@ public class CommonUtil {
         try {
             return URLEncoder.encode(origin, "utf-8");
         } catch (UnsupportedEncodingException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
             return null;
         }

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Yippee | 列表</title>
+    <!--Import Google Icon Font   http://fonts.useso.com/-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/materialize/css/materialize.min.css" media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--引入网页logo-->
+    <link rel="icon" type="image/x-icon" href="/img/logo/logo.png">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- 黏性頁腳支持 -->
+    <style type="text/css" th:include="layout/indexLayout::footer_css"></style>
+    <style type="text/css">
+
+
+        .container-fluid {
+            padding: 20px;
+        }
+
+        .box {
+            margin-bottom: 20px;
+            float: left;
+            width: 220px;
+        }
+
+        .box img {
+            max-width: 100%
+        }
+
+        .card_name {
+            background-image: url("/img/card_name_bgimg.png");
+            background-size: cover;
+        }
+
+        nav {
+            background-color: rgba(99, 99, 99, 0.21);
+        }
+    </style>
+</head>
+<body style="min-width: 1200px">
+<!-- 页头 -->
+<header th:include="layout/indexLayout::head_layout"></header>
+<main>　
+    <br><br>
+
+    <nav style="margin-top: 20px">
+        <div class="nav-wrapper">
+            <form>
+                <div class="input-field">
+                    <input id="search" type="search" required>
+                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                    <i class="material-icons">close</i>
+                </div>
+            </form>
+        </div>
+    </nav>
+    <br>
+    <div class="row">
+        <a class="waves-effect waves-teal btn-flat col s4 center-align #e0e0e0 grey-text lighten-2">投稿时间</a>
+        <a class="waves-effect waves-teal btn-flat col s4 center-align #e0e0e0 grey-text lighten-2">喜欢人数</a>
+        <a class="waves-effect waves-teal btn-flat col s4 center-align #e0e0e0 grey-text lighten-2">价格</a>
+        <!-- 保留<a class="waves-effect waves-teal btn-flat col s3">参与价格调整人数</a>-->
+    </div>
+    <br>
+    <br>
+    <div style="margin-left: 15%" id="masonry" class=" container-fluid">
+        <div class="row">
+            <!--http://www.materializecss.cn/images/nature/lorempixel8.jpg-->
+            <!--http://www.materializecss.cn/images/office.jpg-->
+
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img onclick="alert(1)" src="http://www.materializecss.cn/images/office.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+            <!--示例数据========================================================-->
+
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/nature/lorempixel8.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/office.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/nature/lorempixel8.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/office.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/nature/lorempixel8.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/office.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/nature/lorempixel8.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/office.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/nature/lorempixel8.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/office.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/nature/lorempixel8.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/office.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/nature/lorempixel8.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/office.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/nature/lorempixel8.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/office.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/nature/lorempixel8.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/office.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/nature/lorempixel8.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/office.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/nature/lorempixel8.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/office.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/nature/lorempixel8.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/office.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+
+            <!--卡片结构-->
+            <div class="col s2 box">
+                <div class="card  " onclick="alert_details(1)">
+                    <div class="card-image">
+                        <img src="http://www.materializecss.cn/images/nature/lorempixel8.jpg">
+                        <span class="card-title card_name">名字</span>
+                    </div>
+                </div>
+            </div>
+            <!--卡片结构-->
+        </div>
+    </div>
+
+    <ul class="pagination">
+        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+        <li class="active"><a href="#!">1</a></li>
+        <li class="waves-effect"><a href="#!">2</a></li>
+        <li class="waves-effect"><a href="#!">3</a></li>
+        <li class="waves-effect"><a href="#!">4</a></li>
+        <li class="waves-effect"><a href="#!">5</a></li>
+        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+    </ul>
+    <br>
+    <br>
+</main>
+<!-- 通用頁腳  -->
+<footer style="min-width: 1200px" class="page-footer #00b0ff light-blue accent-3"
+        th:include="layout/indexLayout::footer_layout"></footer>
+<!-- 框架支持 -->
+<div th:replace="layout/indexLayout::ImportJS"></div>
+<script type="text/javascript" src="/js/masonry/masonry.min.js"></script>
+<script type="text/javascript" src="/js/picture/piclist.js"></script>
+</body>
+</html>
