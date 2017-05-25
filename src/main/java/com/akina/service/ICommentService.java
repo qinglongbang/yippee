@@ -15,10 +15,11 @@ public interface ICommentService {
     /**
      * 按照图片id,分页获得评论集合
      *
-     * @param pic_id
+     * @param pic_id 图片ID
+     * @param pageNum 页码
      * @return
      */
-    CutPageBean findByPicId(Integer pic_id);
+    CutPageBean findByPicId(Integer pic_id,Integer pageNum);
 
     /***
      * sql已经写好
@@ -26,5 +27,5 @@ public interface ICommentService {
      * @param comment 评论实体
      * @return
      */
-    Boolean addComment(Comment comment);
+    Integer addComment(Comment comment);
 }
