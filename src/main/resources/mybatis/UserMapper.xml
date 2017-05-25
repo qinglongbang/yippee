@@ -86,4 +86,8 @@
     <select id="selectUserBypram" resultMap="BaseResultMap">
     select * from `user` u where  u.user_mail = #{mail} and u.user_pwd= #{pwd}
   </select>
+    <!-- 按照邮箱查询用户sql  -->
+    <select id="selectUserByMail" resultMap="BaseResultMap">
+        select * from `user` u where  u.user_mail = #{mail}
+    </select>
 </mapper>

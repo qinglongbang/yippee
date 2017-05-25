@@ -27,7 +27,11 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public User regUser(User user) {
-        return null;
+        User use = userMapper.selectUserByMail(user.getUserMail());
+        if(null != null){
+            userMapper.insert(user);
+        }
+        return use;
     }
 
 }
