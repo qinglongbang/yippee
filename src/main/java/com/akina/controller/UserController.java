@@ -41,9 +41,9 @@ public class UserController {
      * @return
      */
     @RequestMapping("cente")
-    public String myCente() {
+    public String myCente() throws Exception {
 //        //测试代码
-//        new MailUtil().sendSimpleMail("13550196274@163.com", "测试", "您的验证码为123213");
+//        new MailUtil().sendSimpleMail("1601358582@qq.com", "测试", "您的验证码为123213");
         return StaticStr.USER_CENTE;
     }
 
