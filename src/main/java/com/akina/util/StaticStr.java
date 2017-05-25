@@ -44,4 +44,10 @@ public class StaticStr {
 
     public static String USER_SUBMISSION = "user/submission";
 
+    /***
+     * 每页显示记录条数
+     */
+    public static Integer PAGE_SIZE = 10;
+
+
 }
