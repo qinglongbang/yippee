@@ -12,8 +12,6 @@ import com.qiniu.storage.UploadManager;
 import com.qiniu.storage.model.DefaultPutRet;
 import com.qiniu.util.Auth;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.InputStream;
 
 /**
@@ -45,7 +43,7 @@ public class QiniuUtils {
     }
 
     /**
-     * 返回头像命名规范的key
+     * 返回图片命名规范的key
      *
      * @param user 用户
      * @return 返回七牛云指定的key
