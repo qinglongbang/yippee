@@ -2,6 +2,7 @@ package com.akina.controller;
 
 import com.akina.bean.User;
 import com.akina.service.IUserService;
+import com.akina.util.CommonUtil;
 import com.akina.util.MailUtil;
 import com.akina.util.StaticStr;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -82,8 +83,7 @@ public class UserController {
      */
     @RequestMapping(value = "useLogin", method = RequestMethod.POST)
     public String useLogin(String login_mail, String login_pwd, HttpSession session, Model model) {
-        System.out.println("进入登陆控制器");
-        System.out.println(login_pwd+"进入登陆控制器"+login_mail);
+
         User bean = iUserService.Login(login_mail, login_pwd);
         if(null == bean){//登录失败
             model.addAttribute("errormsg", "登陆失败，请检查您的账号和密码");
@@ -100,32 +100,40 @@ public class UserController {
      *
      * @param reg_mail
      * @param reg_pwd
+     *  @param reg_yanzheng
      * @return
      */
+    @ResponseBody
     @RequestMapping(value = "useReg", method = RequestMethod.POST)
-    public String useReg(String reg_mail, String reg_pwd ,HttpSession session, Model model) {
-        User use = new User();
-        use.setUserMail(reg_mail);
-        use.setUserPwd(reg_pwd);
-        User bean = iUserService.regUser(use);
-        if(null == bean){
-            model.addAttribute("errormsg", "注册失败");
+    public Integer useReg(String reg_mail, String reg_pwd ,String reg_yanzheng,HttpSession session) {
+        String code = session.getAttribute(StaticStr.SESSION_VERCODE).toString();
+        System.out.println("code="+code);
+        if(code.equals(reg_yanzheng)){//判断用户输入的验证码是否正确
+            User use = new User();
+            use.setUserMail(reg_mail);
+            use.setUserPwd(CommonUtil.GetMD5(reg_pwd));
+            User bean = iUserService.regUser(use);
+            if(null == bean){//返回-1表示注册失败
+                return -1;
+            }
+            //返回1表示注册成功
+            return 1;
+        }else{
+            //返回0表示验证码错误
+            return 0;
         }
-        //这里是否要清空一下session？
-        return StaticStr.USER_LOGIN;
     }
 
     /**
      * 验证码
      * @param reg_mail 注册邮箱
-     * @param model
      * @return
      */
     @ResponseBody
     @RequestMapping(value = "verifyCode", method = RequestMethod.POST)
-    public Integer VerifyCode(String reg_mail,HttpSession session,Model model){
+    public Integer VerifyCode(String reg_mail,HttpSession session){
         User bean = iUserService.selectUserByMail(reg_mail);
-        if(null != bean){//验证邮箱是否呗注册，好发送验证码
+        if(null != bean){//验证邮箱是否注册，好发送验证码
             return -1;
         }
         String code =  mailUtil.sendEmail(reg_mail);

@@ -89,6 +89,7 @@
     <div id="glasspane">
         <div class="row">
             <img class="col s6" src="/img/logo/login_logo.png">
+            <input id="errormsg" name="errormsg" type="hidden" th:text="${errormsg}" >
         </div>
         <div class="row">
             <div class="col s12 ">
@@ -126,7 +127,7 @@
 
             </div>
             <div id="test2" class="col s12">
-                <form action="/user/useReg" method="post" class="hoverable" onsubmit="return verifyCode()">
+                <form action="#" method="post" class="hoverable">
                     <br><br>
                     <div class="row">
                         <div class="input-field col s8">
@@ -134,7 +135,8 @@
                             <label for="reg_mail" id="mail_msg">邮箱</label>
                         </div>
                         <div class="input-field col s3 offset-s1">
-                            <a onclick="verifyEmail()" class="waves-effect waves-light btn #ffd180 orange accent-1">发送验证码</a>
+                            <button id="verifyEmail" class="waves-effect waves-light btn #ffd180 orange accent-1">发送验证码</button>
+
                         </div>
                     </div>
                     <div class="row">
@@ -150,8 +152,8 @@
                         </div>
                     </div>
                     <div class="row">
-                        <button class="btn waves-effect waves-light col s4 offset-s1 submit_btn_login" type="submit"
-                                name="action">
+                        <button class="btn waves-effect waves-light col s4 offset-s1 submit_btn_login"
+                                name="action" id ="subForm" >
                             注册
                             <i class="material-icons right">send</i>
                         </button>
@@ -278,35 +280,12 @@
 <!-- 框架支持 -->
 <div th:replace="layout/indexLayout::ImportJS"></div>
 <script type="text/javascript" src="/js/index.js"></script>
+<script type="text/javascript" src="/js/user/user_login.js"></script>
 <script type="text/javascript">
     $(function() {
-        Materialize.toast("${errormsg}", 4000);
+        var msg = $('#onsubmit').val();
+        Materialize.toast(msg, 4000);
     });
-</script>
-<script type="text/javascript">
-    function verifyEmail(){
-        alert("进来")
-        var email=$("#reg_mail").val();
-
-        $.post("/user/verifyCode","reg_mail="+email,function(info){
-            if(-1 == info){
-                $("#mail_msg").html("邮箱已被注册");
-            }
-        },"json");
-
-    }
-
-    function verifyCode(){
-        var verifyCode=$("#reg_yanzheng").val();
-        var sessionCode = ${verCode};
-        if(sessionCode == verifyCode){
-            return true;
-        }else{
-            $("#reg_yanzheng_msg").html("验证码错误");
-            return false;
-        }
-
-    }
 </script>
 <!-- loding模块 -->
 <div id="loding" class="modal">
