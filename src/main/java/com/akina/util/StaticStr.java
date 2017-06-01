@@ -49,5 +49,13 @@ public class StaticStr {
      */
     public static Integer PAGE_SIZE = 10;
 
+    /***
+     * 存放在session中的登录用户
+     */
+    public static String SESSION_BEAN = "loginBean";
+    /***
+     * 存放在session中的验证码
+     */
+    public static String SESSION_VERCODE = "verCode";
 
 }

@@ -32,5 +32,11 @@ public interface IUserService {
      */
     User regUser(User user);
 
+    /**
+     * 邮箱是否注册
+     * @param mail 邮箱
+     * @return
+     */
+    User selectUserByMail(String mail);
 
 }
