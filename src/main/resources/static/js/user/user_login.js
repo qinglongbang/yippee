@@ -20,7 +20,7 @@ function init() {
                 $("#mail_msg").html("邮箱");
             }
         },"json");
-
+        return false;
     });
 
     $("#subForm").click(function(){

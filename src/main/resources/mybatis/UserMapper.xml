@@ -18,14 +18,12 @@
         where user_id = #{userId,jdbcType=INTEGER}
     </delete>
     <insert id="insert" parameterType="com.akina.bean.User">
-        insert into user (user_id, user_name, user_mail,
-        user_pwd, user_pixiv, user_abstract,
-        user_head_path, user_pay_path, user_integral,
-        create_time)
-        values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userMail,jdbcType=VARCHAR},
-        #{userPwd,jdbcType=VARCHAR}, #{userPixiv,jdbcType=VARCHAR}, #{userAbstract,jdbcType=VARCHAR},
-        #{userHeadPath,jdbcType=VARCHAR}, #{userPayPath,jdbcType=VARCHAR}, #{userIntegral,jdbcType=INTEGER},
-        #{createTime,jdbcType=TIMESTAMP})
+        insert into user (user_id ,user_name, user_mail,
+        user_pwd)
+        values (#{userId,jdbcType=INTEGER},
+        (select CONCAT('yippee0',t.user_id+1) from user t order by t.user_id desc  limit 0,1),
+         #{userMail,jdbcType=VARCHAR},
+        #{userPwd,jdbcType=VARCHAR})
     </insert>
     <update id="updateByPrimaryKey" parameterType="com.akina.bean.User">
         update user
